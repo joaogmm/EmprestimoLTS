@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema Biblioteca</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    label {
+      font: normal 12px courier !important;
+    }
+  </style>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
+  <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+</head>
+<body>
+    <title>Manter empréstimo de Livros</title>
+    </head>
+    <body>
+      <div id="principal">
+        <div id="titulo">
+          <h3>Mantem empréstimo de Livros</h3>
+        </div>
+        <hr>
+        <div id="formulario2">
+            <table id="tabcampos">
+              <tr>
+                <td><label> Número do empréstimo:</label></td>
+                <td><input id="txtEmprestimoNumero" size="50" type="text" name="txtId"
+                  value=""></td>
+              </tr>
+              <tr>
+                <td><label> ISBN:</label></td>
+                <td><input id="txtIsbn" size="15" type="text" name="txtIsbn"
+                  value=""></td>
+              </tr>
+              <tr>
+                  <td><label> Ra:</label></td>
+                  <td><input id="txtRa" size="15" type="text" name="txtRa"
+                    value=""></td>
+                </tr>
+              <tr>
+                <td><label> Data Empréstimo:</label></td>
+                <td><input id="txtDataEm" size="15" type="text" name="txtDataEm"
+                  value=""></td>
+              </tr>         
+              <tr>
+                  <td><label> Data devolução:</label></td>
+                  <td><input id="txtDataDe" size="15" type="text" name="txtDataDe"
+                    value=""></td>
+                </tr>                                         
+              <tr>
+                <td colspan=2 id="botoes" align="right">
+                <input id="submitBtn" type=button name=btnAdiciona onclick="adicionar()" value=Adicionar>
+                  <input id="submitBtn" type=button name=btnExcluir onclick="excluir()" value=Excluir>
+                  </td>
+              </tr>
+            </table>
+            <input type="hidden" name="acao" value="">
+            <input type="hidden" name="menu" value="principal">
+          </form>
+        </div>
+      </div>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBoTNKWN-i13mHLVUtPwHmmOFsYukZBHB4",
+      authDomain: "emprestimolts.firebaseapp.com",
+      databaseURL: "https://emprestimolts.firebaseio.com",
+      projectId: "emprestimolts",
+      storageBucket: "emprestimolts.appspot.com",
+      messagingSenderId: "113439724658"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src = "app.js"></script>
+</body>
+</html>
